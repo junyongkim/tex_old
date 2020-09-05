@@ -1,0 +1,37 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 200130usepackage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\ProvidesPackage{usepackage}			% must be the filename
+\usepackage[margin=1in]{geometry}		% 1in margins
+\usepackage[doublespacing]{setspace}	% doublespace
+\usepackage[pdfpagemode=UseNone,		% no bookmark in acrobat
+	pdfstartview=]{hyperref}			% default zoom
+\usepackage{natbib}						% [] -> ()
+\usepackage[labelsep=period,			% Table 1: -> Table 1.
+	skip=0pt]{caption}					% no caption gap
+\usepackage[input-decimal-markers={.},	% decimal alignment
+	group-separator={,},				% 1000 -> 1,000
+	parse-numbers=false]{siunitx}		% math mode in siunitx S
+\ExplSyntaxOn							% edit siunitx for tabu
+	\cs_new_eq:NN
+	\siunitx_table_collect_begin:Nn
+	\__siunitx_table_collect_begin:Nn
+\ExplSyntaxOff
+\usepackage{pdflscape,					% rotated landscape
+	xcolor,								% \colorbox
+	amsmath,							% math syntaxes
+	amssymb,							% math symbols
+	amsthm,								% theorems below
+	textcomp,							% \textminus
+	cancel,								% \cancel
+	tabu,								% \begin{tabu}{X}
+	booktabs,							% \toprule
+	multirow,							% \multirow
+	graphicx}							% \includegraphics
+\setlength{\fboxsep}{0pt}				% no padding around \colorbox
+\theoremstyle{plain}					% plain style hereafter
+\newtheorem{assu}{Assumption}			% \begin{assu}
+\newtheorem{defi}{Definition}			% \begin{defi}
+\newtheorem{hypo}{Hypothesis}			% \begin{hypo}
+\newtheorem{prop}{Proposition}			% \begin{prop}

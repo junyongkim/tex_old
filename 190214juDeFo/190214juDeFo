@@ -1,0 +1,119 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% juDeFo
+% Junyong Kim
+% February 14th, 2019
+%
+% 190214
+% juDeFo is Junyong Kim's LaTeX default format.
+% There are three blocks of packages.
+% Block 1 activates the packages with parameters.
+% Block 2 activates the packages without them.
+% Block 3 activates HYPERREF to avoid conflicts.
+% Blocks sort the packages in ascending order.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Use the following to just copy and paste
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\iffalse
+\usepackage[font=footnotesize,
+    labelsep=period,
+    skip=0pt]{caption}
+\usepackage[margin=1in]{geometry}
+\usepackage[round]{natbib}
+\usepackage[doublespacing]{setspace}
+\usepackage[group-separator={,},
+    input-decimal-markers={.},
+    parse-numbers=false]{siunitx}
+\ExplSyntaxOn
+    \cs_new_eq:NN
+    \siunitx_table_collect_begin:Nn
+    \__siunitx_table_collect_begin:Nn
+\ExplSyntaxOff
+\usepackage{xcolor}
+\setlength{\fboxsep}{0pt}
+
+\usepackage{amsmath,
+    amssymb,
+    amsthm,
+    booktabs,
+    cancel,
+    graphicx,
+    multirow,
+    pdflscape,
+    tabu,
+    textcomp}
+\theoremstyle{plain}
+\newtheorem{definition}{Definition}
+\newtheorem{hypothesis}{Hypothesis}
+\newtheorem{proposition}{Proposition}
+
+\usepackage[pdfpagemode=UseNone,
+    pdfstartview=]{hyperref}
+\fi
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Block 1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[font=footnotesize,                     % Make captions small
+    labelsep=period,                               % Alter Table 1: by Table 1.
+    skip=0pt]{caption}                             % Remove the caption gaps
+\usepackage[margin=1in]{geometry}                  % Tune the margin settings
+\usepackage[round]{natbib}                         % Alter [] by ()
+\usepackage[doublespacing]{setspace}               % Use doublespacing
+\usepackage[group-separator={,},                   % Insert thousand separators
+    input-decimal-markers={.},                     % Activate decimal alignments
+    parse-numbers=false]{siunitx}                  % Let S columns use a math mode
+\ExplSyntaxOn
+    \cs_new_eq:NN
+    \siunitx_table_collect_begin:Nn
+    \__siunitx_table_collect_begin:Nn
+\ExplSyntaxOff                                     % Let SIUNITX be compatible with TABU
+\usepackage{xcolor}                                % Enable COLORBOX
+\setlength{\fboxsep}{0pt}                          % Remove the COLORBOX paddings
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Block 2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amsmath,                               % Import math syntax
+    amssymb,                                       % Import some math symbols
+    amsthm,                                        % Enable theorem-like environments
+    booktabs,                                      % Enable TOPRULE, BOTTOMRULE, etc.
+    cancel,                                        % Enable CANCEL
+    graphicx,                                      % Enable INCLUDEGRAPHICS
+    multirow,                                      % Enable MULTIROW
+    pdflscape,                                     % Enable LANDSCAPE with rotation
+    tabu,                                          % Enable TABU and X columns
+    textcomp}                                      % Enable TEXTMINUS
+\theoremstyle{plain}                               % Let the following be plain
+\newtheorem{definition}{Definition}                % Enable DEFINITION
+\newtheorem{hypothesis}{Hypothesis}                % Enable HYPOTHESIS
+\newtheorem{proposition}{Proposition}              % Enable PROPOSITION
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Block 3
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[pdfpagemode=UseNone,                   % Inactivate the bookmarks in Acrobat
+    pdfstartview=]{hyperref}                       % Use the default zoom setting
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Title information
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{\texttt{juDeFo}}
+\author{Junyong Kim}
+\date{February 14th, 2019}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% A title page
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\maketitle
+
+\begin{abstract}
+\texttt{juDeFo} is Junyong Kim's default \LaTeX{} format.
+\end{abstract}
+\end{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% The end
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

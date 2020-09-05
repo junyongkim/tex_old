@@ -1,0 +1,205 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% UWM Dissertation Format (uDiFo.tex)
+% Junyong Kim
+% February 14th, 2019
+%
+% 190214
+% uwmDiFo was renamed by uDiFo.
+% uwmDiFo.tex was renamed by uDiFo.tex.
+% uwmDiFo.bib was renamed by uDiFo.bib.
+% I sorted the packages in ascending order.
+% I altered private information such as an acknowledgement by LIPSUM.
+% I attached the date information to filenames to upload to GitHub.
+% I included the uDiFo.pdf file, which is the output.
+%
+% 190213
+% uwmDiFo consists of 5 files (uwmDiFo.tex, uwmDiFo.bib, jf.bst, thesis-and-dissertation-formatting.pdf, jf.bst, and preferred_blk.eps).
+% I wrote the main tex code (uwmDiFo.tex) and the corresponding bib code (uwmDiFo.bib) to be inserted.
+% I downloaded and used the jf.bst file by Professor Richard H. Stanton (http://faculty.haas.berkeley.edu/stanton/texintro/).
+% This is the guideline I followed (https://uwm.edu/graduateschool/wp-content/themes/uwmwebid-graduateschool/media/thesis-and-dissertation-formatting.pdf).
+% The guideline includes a sample acknowledgement page by Doctor _________________ (___________________________)
+% I downloaded and inserted the preferred_blk.eps (altered a space by an underscore) file by UWM (https://uwm.edu/branding/uwm-preferred-logo-downloads/).
+% Margins are 1 inch. FRONTMATTER uses only one side, while MAINMATTER and APPENDIX use two sides.
+% Compile pdfLaTeX, BibTeX, pdfLaTeX, and pdfLaTeX consecutively to complete
+% Programming comments are attached right before each part with no line break
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[12pt]{book}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Default packages
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[font={footnotesize,bf},                % Small and bold characters
+    labelsep=period,                               % Alters Table 1: by Table 1.
+    skip=0pt]{caption}                             % Remove the gaps after CAPTIONS
+\usepackage[margin=1in]{geometry}                  % Adjusts the margin settings
+\usepackage[doublespacing]{setspace}               % Uses doublespacing by default
+\usepackage{booktabs,graphicx,lipsum,natbib,tabu}  % Enables TOPRULE, INCLUDEGRAPHICS, LIPSUM, CITEP, TABU, etc.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Title page
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\frontmatter
+{\centering\LARGE \textsc{Factors Affecting Degree Progress of Graduate Students at a Large Urban University and Implications for Student Services Operations and University Policy} \par}
+
+\phantom{}\par\phantom{}
+
+{\centering\large by\\Chris Jung \par}
+
+\phantom{}\par\phantom{}
+
+{\centering\large A Dissertation Submitted in\\Partial Fulfillment of the\\Requirements for the Degree of \par}
+
+\phantom{}\par\phantom{}
+
+{\centering\large Doctor of Philosophy\\in Urban Education \par}
+
+\phantom{}\par\phantom{}
+
+{\centering\large at\\The University of Wisconsin--Milwaukee\\May 2016 \par}
+\pagestyle{plain}\setcounter{page}{0}\clearpage\phantom{}\setcounter{page}{0}\clearpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Abstract page
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{singlespacing}\chapter*{Abstract}
+
+{\centering\LARGE \textsc{Factors Affecting Degree Progress of Graduate Students at a Large Urban University and Implications for Student Services Operations and University Policy} \par}
+
+\phantom{}
+
+{\centering\large by\\Chris Jung \par}
+
+\phantom{}
+
+{\centering\large The University of Wisconsin--Milwaukee, 2016\\Under the Supervision of Professor name of major professor \par}
+
+\phantom{}
+
+\noindent March, 2013 ProQuest states: We no longer have a word limit on your abstract, as this constrains your ability to describe your research in a section that is accessible to search engines, and therefore would constrain potential exposure of your work. However, we continue to publish print indexes that include citations and abstracts of all dissertations and theses published by ProQuest/UMI. These print indexes require limits of 350 words for doctoral dissertations and 150 words for master's theses. Additionally, our print indexes allow only text to be included in the abstract. In the editorial process for these print publications, we will simply truncate your abstract if it exceeds these word limits and remove any non-text content. You may wish to limit the length of your abstract if this concerns you. The abstract as you submit it will NOT be altered in your published manuscript. Please include an additional version of your abstract in English, even if the primary language of your dissertation or thesis is NOT English. For additional information regarding formatting of abstracts, please see the FAQ here: http://www.etdadmin.com/cgi-bin/main/faq?siteId=164\#ts10\par\end{singlespacing}
+\addcontentsline{toc}{chapter}{Abstract}\setcounter{page}{2}\clearpage\phantom{}\setcounter{page}{0}\clearpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Copyright page
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{singlespacing}\phantom{}\par\phantom{}\par\phantom{}\par\phantom{}\par\phantom{}\par\phantom{}\par\phantom{}\par\phantom{}\par\phantom{}\par\phantom{}\par\phantom{}\par\phantom{}\par\phantom{}\par\phantom{}\par\phantom{}\par\phantom{}\par\phantom{}\par\phantom{}\par\phantom{}\par\phantom{}
+
+{\centering \copyright{} Copyright by Chris Jung, 2016\\All Rights Reserved \par}
+
+\phantom{}\par\phantom{}\par\phantom{}\par\phantom{}\par\phantom{}\par\phantom{}\par\phantom{}\par\phantom{}\par\phantom{}\par\phantom{}\par\phantom{}\par\phantom{}\par\phantom{}\par\phantom{}\par\phantom{}\par\phantom{}\par\phantom{}\par\phantom{}\par\phantom{}\par\phantom{}\par\end{singlespacing}
+\setcounter{page}{3}\clearpage\phantom{}\setcounter{page}{0}\clearpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Dedication page
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{singlespacing}\phantom{}\par\phantom{}\par\phantom{}\par\phantom{}\par\phantom{}\par\phantom{}\par\phantom{}\par\phantom{}\par\phantom{}\par\phantom{}\par\phantom{}\par\phantom{}\par\phantom{}\par\phantom{}\par\phantom{}\par\phantom{}\par\phantom{}\par\phantom{}\par\phantom{}\par\phantom{}
+
+{\centering\large To\\my parents,\\my wife,\\and especially my daughter \par}
+
+\phantom{}\par\phantom{}\par\phantom{}\par\phantom{}\par\phantom{}\par\phantom{}\par\phantom{}\par\phantom{}\par\phantom{}\par\phantom{}\par\phantom{}\par\phantom{}\par\phantom{}\par\phantom{}\par\phantom{}\par\phantom{}\par\phantom{}\par\phantom{}\par\phantom{}\par\phantom{}\par\end{singlespacing}
+\setcounter{page}{4}\clearpage\phantom{}\setcounter{page}{0}\clearpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Contents page
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{singlespacing}\tableofcontents\end{singlespacing}\addcontentsline{toc}{chapter}{Contents}\setcounter{page}{5}\clearpage\phantom{}\setcounter{page}{0}\clearpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Tables page
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{singlespacing}\listoftables\end{singlespacing}\addcontentsline{toc}{chapter}{List of Tables}\setcounter{page}{6}\clearpage\phantom{}\setcounter{page}{0}\clearpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Figures page
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{singlespacing}\listoffigures\end{singlespacing}\addcontentsline{toc}{chapter}{List of Figures}\setcounter{page}{7}\clearpage\phantom{}\setcounter{page}{0}\clearpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Acknowledgement page
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{singlespacing}\chapter*{Acknowledgement}
+\lipsum[1]\par\end{singlespacing}
+\addcontentsline{toc}{chapter}{Acknowledgement}\setcounter{page}{8}\clearpage\phantom{}\setcounter{page}{0}\clearpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% First chapter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\mainmatter
+\chapter{TEXT}
+This is a dummy sentence \citep{fama1992cross}.
+
+\section{TEXT}
+This is a dummy sentence.
+\clearpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Sample table page
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{table}
+\caption{TEXT}\footnotesize
+This is a dummy sentence. This is a dummy sentence. This is a dummy sentence. This is a dummy sentence. This is a dummy sentence.\par\centering
+\begin{tabu}{*5{X[c,m]}}\toprule
+TEXT & $1.0000$ & $1.0000$ & $1.0000$ & $1.0000$ \\\bottomrule
+\end{tabu}
+\end{table}
+\clearpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Sample figure page
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}
+\caption{TEXT}\footnotesize
+This is a dummy sentence. This is a dummy sentence. This is a dummy sentence. This is a dummy sentence. This is a dummy sentence.\par\centering
+\includegraphics[width=\textwidth]{190214preferred_blk}
+\end{figure}
+\clearpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Bibliography page
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\appendix
+\bibliographystyle{190214jf}
+\begin{singlespacing}\bibliography{190214uDiFo}\end{singlespacing}
+\addcontentsline{toc}{chapter}{Bibliography}
+
+\chapter{TEXT}
+This is a dummy sentence \citep{fama1993common}.
+\clearpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Curriculum vitae page
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{singlespacing}\chapter*{Curriculum Vitae}
+
+\noindent Chris Jung
+
+\phantom{}
+
+\noindent Place of birth: Milwaukee, WI
+
+\phantom{}
+
+\noindent Education
+
+B.A., University of Wisconsin--Milwaukee, May 1979
+
+Major: Psychology
+
+\phantom{}
+
+B.F.A., University of Wisconsin--Milwaukee, May 1985
+
+Major: Music Education
+
+\phantom{}
+
+M.L.I.S., University of Wisconsin--Milwaukee, May 1992
+
+\phantom{}
+
+\noindent Dissertation Title: Factors Affecting Degree Progress of Graduate Students at a Large Urban University and Implications for Student Services Operations and University Policy\par\end{singlespacing}
+\addcontentsline{toc}{chapter}{Curriculum Vitae}\clearpage
+\end{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% The end
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
